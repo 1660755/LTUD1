@@ -1,0 +1,44 @@
+﻿<Fluent:RibbonWindow x:Class="DoAn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAn"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="450" Width="800" Loaded="MainWindow_Loaded">
+    <Window.Resources>
+        <local:ByteArrayToImageConverter x:Key="converter" />
+    </Window.Resources>
+    <DockPanel LastChildFill="True" Margin="0,0,-0.4,0">
+        <Fluent:Ribbon DockPanel.Dock="Top">
+            <Fluent:RibbonTabItem Header="Master Data">
+                <Fluent:RibbonGroupBox Header="Import">
+                    <Fluent:Button Header="Excel" x:Name="importFromExcel"  >
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/excel.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+        <DockPanel DockPanel.Dock="Top">
+            <ComboBox x:Name="categoriesComboBox" Width="163" SelectionChanged="categoriesCombobox_change" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBox x:Name="searchProductTextBox" TextChanged="searchProductTextBox_change" />
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <ComboBox Name="pagingComboBox" SelectionChanged="pagingComboBox_change" Width="100" Height="35"></ComboBox>
+        </DockPanel>
+        <DataGrid x:Name="productDataGrid">
+
+        </DataGrid>
+    </DockPanel>
+</Fluent:RibbonWindow>
