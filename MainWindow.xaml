@@ -11,12 +11,34 @@
         <local:ByteArrayToImageConverter x:Key="converter" />
     </Window.Resources>
     <DockPanel LastChildFill="True" Margin="0,0,-0.4,0">
-        <Fluent:Ribbon DockPanel.Dock="Top">
+        <Fluent:Ribbon DockPanel.Dock="Top" Height="117" Margin="0,0,-0.4,0">
             <Fluent:RibbonTabItem Header="Master Data">
-                <Fluent:RibbonGroupBox Header="Import">
-                    <Fluent:Button Header="Excel" x:Name="importFromExcel"  >
+                <Fluent:RibbonGroupBox Header="Import" Height="76">
+                    <Fluent:Button Header="Excel" Click="importFromExcel_click" x:Name="importFromExcel" Padding="5, 0, 5, 0" Height="Auto" Margin="0,0,0,4.8">
                         <Fluent:Button.LargeIcon>
-                            <Image Source="/Images/excel.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                            <Image Source="/Images/xls.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="CSV" x:Name="importCSV" Padding="5, 0, 5, 0" Height="Auto" Margin="0,0,0,4.8" >
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/csv.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="Action" Height="76">
+                    <Fluent:Button Header="Add" x:Name="addProduct" Padding="5, 0, 5, 0" Height="Auto" Margin="0,0,0,5.8" >
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/plus.png" RenderOptions.BitmapScalingMode="HighQuality" />
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Delete" x:Name="deleteProduct" Padding="5, 0, 5, 0" Height="Auto" Margin="0,0,0,5.8" >
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/clear.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Edit" x:Name="editProduct" Padding="5, 0, 5, 0" Height="Auto" Margin="0,0,0,5.8" >
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/edit.png" RenderOptions.BitmapScalingMode="HighQuality"/>
                         </Fluent:Button.LargeIcon>
                     </Fluent:Button>
                 </Fluent:RibbonGroupBox>

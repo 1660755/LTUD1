@@ -171,11 +171,9 @@
   <ItemGroup>
     <Resource Include="Images\add.png" />
     <Resource Include="Images\avatar04.jpg" />
-    <Resource Include="Images\delete.png" />
     <Resource Include="Images\edit.png" />
     <Resource Include="Images\error.png" />
     <Resource Include="Images\excel.png" />
-    <Resource Include="Images\plus.png" />
     <Resource Include="Images\search.png" />
     <Resource Include="Images\test.png" />
   </ItemGroup>
@@ -190,6 +188,10 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\clear.png" />
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\csv.png" />
+    <Resource Include="Images\xls.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
